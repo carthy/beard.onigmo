@@ -250,13 +250,11 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 encdir = $(top_srcdir)/enc
-sampledir = $(top_srcdir)/sample
 libname = libonig.la
 
 #AM_CFLAGS = -DNOT_RUBY
 AM_CFLAGS = 
 INCLUDES = -I$(top_srcdir) -I$(includedir)
-SUBDIRS = . sample
 include_HEADERS = oniguruma.h oniggnu.h onigposix.h
 lib_LTLIBRARIES = $(libname)
 libonig_la_SOURCES = regint.h regparse.h regenc.h st.h \
@@ -288,9 +286,6 @@ EXTRA_DIST = .gitignore HISTORY README.ja index.html index_ja.html \
 	win32/Makefile win32/config.h win32/testc.c \
 	win32/makedef.py win32/onig.rc \
 	$(encdir)/koi8.c $(encdir)/mktable.c \
-	$(sampledir)/encode.c $(sampledir)/listcap.c $(sampledir)/names.c \
-	$(sampledir)/posix.c $(sampledir)/simple.c $(sampledir)/sql.c \
-	$(sampledir)/syntax.c $(sampledir)/crnl.c \
 	test.rb testconv.rb testconvu.rb \
 	onig.py testpy.py
 
